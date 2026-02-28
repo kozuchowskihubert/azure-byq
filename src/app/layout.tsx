@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { SessionProvider } from "next-auth/react"
 import { CartProvider } from "@/context/CartContext"
 import Navbar from "@/components/Navbar"
+import AssistantWidget from "@/components/AssistantWidget"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({
           <CartProvider>
             <Navbar />
             {children}
+            <AssistantWidget />
           </CartProvider>
         </SessionProvider>
       </body>

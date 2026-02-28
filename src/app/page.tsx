@@ -105,10 +105,25 @@ export default function Home() {
             <a href="#burgery" className="add-btn" style={{ display: 'inline-block', padding: '0.9rem 2.5rem', fontSize: '1.1rem', textDecoration: 'none' }}>
               Zobacz menu
             </a>
+            <Link href="/kreator" className="add-btn" style={{ display: 'inline-block', padding: '0.9rem 2.5rem', fontSize: '1.1rem', textDecoration: 'none', borderColor: 'var(--accent)', color: 'var(--accent)' }}>
+              🍔 Stwórz swojego
+            </Link>
+          </div>
+          {/* Scroll hint */}
+          <div className="scroll-hint">
+            <span>↓</span>
           </div>
         </section>
 
         <div className="content-wrapper">
+          {/* Onboarding banner */}
+          <div className="onboarding-banner">
+            <div className="onboarding-icon">👋</div>
+            <div className="onboarding-body">
+              <p className="onboarding-text">Pierwszy raz? <strong>Dodaj produkty do koszyka</strong> przyciskiem pod każdym daniem, albo <Link href="/kreator" style={{ color: '#FF6B00', textDecoration: 'underline' }}>stwórz własnego burgera w Kreatorze</Link>.</p>
+            </div>
+          </div>
+
           {/* Panels */}
           <section id="studios" style={{ marginBottom: '8rem' }}>
             <h2 className="category-title">{t.burgerPanels}</h2>

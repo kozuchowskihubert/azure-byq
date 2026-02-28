@@ -161,27 +161,32 @@ export const MENU: MenuCategory[] = [
             {
                 id: "z1", name: "Zwykła", nameEn: "Classic", price: 13,
                 description: "ser, pieczarki, sos do wyboru",
-                descriptionEn: "cheese, mushrooms, sauce of choice"
+                descriptionEn: "cheese, mushrooms, sauce of choice",
+                image: "/zapiekanka_classic.png"
             },
             {
                 id: "z2", name: "Mięsna", nameEn: "Meaty", price: 16,
                 description: "ser, pieczarki, szynka / salami / boczek, sos",
-                descriptionEn: "cheese, mushrooms, ham / salami / bacon, sauce"
+                descriptionEn: "cheese, mushrooms, ham / salami / bacon, sauce",
+                image: "/zapiekanka_loaded.png"
             },
             {
                 id: "z3", name: "Warzywna", nameEn: "Veggie", price: 18,
                 description: "ser, pieczarki, ogórek, pomidor, sos",
-                descriptionEn: "cheese, mushrooms, cucumber, tomato, sauce"
+                descriptionEn: "cheese, mushrooms, cucumber, tomato, sauce",
+                image: "/zapiekanka_classic.png"
             },
             {
                 id: "z4", name: "Na wypasie", nameEn: "Loaded", price: 20,
                 description: "ser, pieczarki, szynka, salami, boczek, prażona cebulka, sos",
-                descriptionEn: "cheese, mushrooms, ham, salami, bacon, crispy onion, sauce"
+                descriptionEn: "cheese, mushrooms, ham, salami, bacon, crispy onion, sauce",
+                image: "/zapiekanka_loaded.png"
             },
             {
                 id: "z5", name: "Truflowa", nameEn: "Truffle", price: 22,
                 description: "ser truflowy, pieczarki, prażona cebulka, rucola, sos ziołowy",
-                descriptionEn: "truffle cheese, mushrooms, crispy onion, arugula, herb sauce"
+                descriptionEn: "truffle cheese, mushrooms, crispy onion, arugula, herb sauce",
+                image: "/zapiekanka_loaded.png"
             },
         ]
     },
@@ -192,11 +197,13 @@ export const MENU: MenuCategory[] = [
         items: [
             {
                 id: "c1", name: "Nuggetsy", nameEn: "Nuggets", price: "14 / 22",
-                description: "6 / 12 szt.", descriptionEn: "6 / 12 pcs."
+                description: "6 / 12 szt.", descriptionEn: "6 / 12 pcs.",
+                image: "/chicken_strips.png"
             },
             {
                 id: "c2", name: "Stripsy", nameEn: "Strips", price: "15 / 23",
-                description: "3 / 6 szt.", descriptionEn: "3 / 6 pcs."
+                description: "3 / 6 szt.", descriptionEn: "3 / 6 pcs.",
+                image: "/chicken_strips.png"
             },
         ]
     },
@@ -205,9 +212,9 @@ export const MENU: MenuCategory[] = [
         title: "DODATKI",
         titleEn: "SIDES",
         items: [
-            { id: "d1", name: "Frytki małe / duże", nameEn: "Fries small / large", price: "6 / 9" },
-            { id: "d2", name: "Frytki z batata", nameEn: "Sweet Potato Fries", price: 15 },
-            { id: "d3", name: "Krążki cebulowe", nameEn: "Onion Rings", price: 12 },
+            { id: "d1", name: "Frytki małe / duże", nameEn: "Fries small / large", price: "6 / 9", image: "/fries_side.png" },
+            { id: "d2", name: "Frytki z batata", nameEn: "Sweet Potato Fries", price: 15, image: "/sweet_potato_fries.png" },
+            { id: "d3", name: "Krążki cebulowe", nameEn: "Onion Rings", price: 12, image: "/onion_rings.png" },
             { id: "d4", name: "Colesław", price: 6 },
             { id: "d5", name: "Sosy", nameEn: "Sauces", price: 2.50 },
         ]

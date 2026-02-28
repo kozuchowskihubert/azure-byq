@@ -267,11 +267,13 @@ h3 {
 
 .content-area {
   overflow-y: auto;
-  height: 100vh;
+  min-height: 100vh;
   scroll-behavior: smooth;
 }
 
 .content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 6rem 4rem;
 }
 
@@ -377,6 +379,93 @@ h3 {
   padding: 0 1.5rem;
   text-align: center;
 }
+
+/* Scroll hint arrow */
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: rgba(220, 20, 60, 0.6);
+  animation: bounceHint 2s infinite;
+}
+
+@keyframes bounceHint {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
+    opacity: 1;
+  }
+}
+
+/* Onboarding banner */
+.onboarding-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  background: rgba(14, 8, 8, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 107, 0, 0.25);
+  border-radius: 12px;
+  margin-bottom: 4rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  animation: fadeSlideDown 0.6s ease;
+}
+
+.onboarding-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.onboarding-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: rgba(245, 236, 234, 0.8);
+  line-height: 1.55;
+}
+
+.onboarding-text strong {
+  color: #FF6B00;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .onboarding-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .onboarding-text {
+    font-size: 0.85rem;
+  }
+
+  .scroll-hint {
+    bottom: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
 
 /* ============================================================
    Category / section titles
@@ -1751,5 +1840,103 @@ h3 {
 
   .kreator-title {
     font-size: 2rem;
+  }
+}
+
+/* ============================================================
+   DESKTOP SCALING — better use of wide screens
+   ============================================================ */
+
+/* Wide desktop: 1200px+ */
+@media (min-width: 1200px) {
+
+  /* Menu: 2 columns on wide screens */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu-item.has-photo {
+    grid-template-columns: 240px 1fr;
+  }
+
+  /* Studios: 4 across */
+  .studios-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Hero: larger */
+  .glitch-text {
+    font-size: 6rem;
+    letter-spacing: 10px;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    max-width: 700px;
+  }
+
+  /* Category titles */
+  .category-title {
+    font-size: 3.2rem;
+  }
+
+  /* Contact grid: better spacing */
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  /* Kreator: wider ingredient cards */
+  .ingredients-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  /* Delivery side-by-side */
+  .delivery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Ultra-wide: 1600px+ */
+@media (min-width: 1600px) {
+  .content-wrapper {
+    max-width: 1600px;
+    padding: 6rem 5rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .glitch-text {
+    font-size: 7rem;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .kreator-layout {
+    grid-template-columns: 420px 1fr;
+    gap: 3rem;
+  }
+
+  .ingredients-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .studios-container {
+    gap: 2rem;
+  }
+
+  .studio-card {
+    height: 350px;
   }
 }
