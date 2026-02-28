@@ -1,0 +1,160 @@
+/* ============================================================
+   AUTH PAGES — RH-Studio glassmorphism style
+   ============================================================ */
+
+.auth-page {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+/* Background glow (rh-style) */
+.auth-glow {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 35% 40%, rgba(220, 20, 60, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 65% 60%, rgba(255, 107, 0, 0.12) 0%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: authGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes authGlow {
+    from {
+        opacity: 0.7;
+        transform: translate(-50%, -50%) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+}
+
+/* Card */
+.auth-card {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    /* rh glassmorphism */
+    background: rgba(14, 8, 8, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 20, 60, 0.22);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    /* inner top-line highlight */
+    background-image: linear-gradient(160deg, rgba(255, 255, 255, 0.025), rgba(0, 0, 0, 0.2));
+}
+
+/* top shimmer bar */
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(220, 20, 60, 0.6), rgba(255, 107, 0, 0.5), transparent);
+    border-radius: 1px;
+}
+
+.auth-logo {
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 6px;
+    text-align: center;
+    background: linear-gradient(135deg, #DC143C, #FF6B00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 12px rgba(220, 20, 60, 0.4));
+}
+
+.auth-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #F5ECEA;
+    margin-bottom: 0.25rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: rgba(138, 116, 120, 0.8);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.auth-switch {
+    text-align: center;
+    color: rgba(138, 116, 120, 0.8);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+.auth-link {
+    color: #DC143C;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.auth-link:hover {
+    color: #FF6B00;
+}
+
+/* ============================================================
+   Shared page/subpage utilities  (shared across basket, forum, feedback, profile)
+   ============================================================ */
+.loading-spin {
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(220, 20, 60, 0.2);
+    border-top-color: #DC143C;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.back-link {
+    color: rgba(138, 116, 120, 0.7);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #DC143C;
+}

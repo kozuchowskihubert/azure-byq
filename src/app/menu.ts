@@ -50,53 +50,56 @@ export const MENU: MenuCategory[] = [
             {
                 id: "b1", name: "Standard", price: 28,
                 description: "wołowina, sałata, ogórek, cebula, sos",
-                descriptionEn: "beef, lettuce, cucumber, onion, sauce"
+                descriptionEn: "beef, lettuce, cucumber, onion, sauce",
+                image: "/burger_standard.png"
             },
             {
                 id: "b2", name: "Serowy", nameEn: "Cheesy", price: 30,
                 description: "wołowina, ser, sałata, pomidor, ogórek, cebula, sos",
-                descriptionEn: "beef, cheese, lettuce, tomato, cucumber, onion, sauce"
+                descriptionEn: "beef, cheese, lettuce, tomato, cucumber, onion, sauce",
+                image: "/burger_standard.png"
             },
             {
                 id: "b3", name: "Kawał byka", nameEn: "Big Bull", price: 40,
                 description: "2× wołowina, 2× ser, boczek, sałata, pomidor, ogórek, cebula, sos",
                 descriptionEn: "2× beef, 2× cheese, bacon, lettuce, tomato, cucumber, onion, sauce",
-                image: "/panel_classic.png"
+                image: "/burger_godfather.png"
             },
             {
                 id: "b4", name: "GOAT BBQ", price: 32,
                 description: "wołowina, ser kozi, cebula marynowana, sos BBQ",
                 descriptionEn: "beef, goat cheese, pickled onion, BBQ sauce",
-                image: "/panel_black.png"
+                image: "/burger_goat.png"
             },
             {
                 id: "b5", name: "Śniadaniowy", nameEn: "Breakfast", price: 34,
                 description: "wołowina, jajko sadzone, boczek, cebula, sałata, sos",
-                descriptionEn: "beef, fried egg, bacon, onion, lettuce, sauce"
+                descriptionEn: "beef, fried egg, bacon, onion, lettuce, sauce",
+                image: "/burger_godfather.png"
             },
             {
                 id: "b6", name: "Zkurczybyq", price: 32,
                 description: "wołowina, ser, sałata, jalapeño, ogórek, cebula, sos",
                 descriptionEn: "beef, cheese, lettuce, jalapeño, cucumber, onion, sauce",
-                image: "/panel_neon.png"
+                image: "/burger_smoky.png"
             },
             {
                 id: "b7", name: "Truffle Hunter", price: 42,
                 description: "wołowina, ser truflowy, grzyby shiitake, rucola, aioli truflowe",
                 descriptionEn: "beef, truffle cheese, shiitake mushrooms, arugula, truffle aioli",
-                image: "/panel_black.png"
+                image: "/burger_truffle.png"
             },
             {
                 id: "b8", name: "Smoky Inferno", price: 36,
                 description: "wołowina, boczek wędzony, cheddar, jalapeño, sos chipotle",
                 descriptionEn: "beef, smoked bacon, cheddar, jalapeño, chipotle sauce",
-                image: "/panel_neon.png"
+                image: "/burger_smoky.png"
             },
             {
                 id: "b9", name: "The Godfather", price: 49,
                 description: "3× wołowina, 3× ser, boczek, jajko sadzone, prażona cebulka, sos secret",
                 descriptionEn: "3× beef, 3× cheese, bacon, fried egg, crispy onion, secret sauce",
-                image: "/panel_classic.png"
+                image: "/burger_godfather.png"
             },
         ]
     },
@@ -108,24 +111,26 @@ export const MENU: MenuCategory[] = [
             {
                 id: "k1", name: "Zwykły", nameEn: "Classic", price: 23,
                 description: "kurczak, sałata, ogórek, pomidor, cebula, sos",
-                descriptionEn: "chicken, lettuce, cucumber, tomato, onion, sauce"
+                descriptionEn: "chicken, lettuce, cucumber, tomato, onion, sauce",
+                image: "/burger_nashville.png"
             },
             {
                 id: "k2", name: "Niezwykły", nameEn: "Loaded", price: 27,
                 description: "kurczak, ser, boczek, sałata, pomidor, ogórek, cebula, sos",
-                descriptionEn: "chicken, cheese, bacon, lettuce, tomato, cucumber, onion, sauce"
+                descriptionEn: "chicken, cheese, bacon, lettuce, tomato, cucumber, onion, sauce",
+                image: "/burger_chicken_loaded.png"
             },
             {
                 id: "k3", name: "Nashville Hot", price: 30,
                 description: "kurczak crispy, kapusta, ogórki kiszone, sos nashville",
                 descriptionEn: "crispy chicken, coleslaw, pickles, nashville hot sauce",
-                image: "/panel_kura.png"
+                image: "/burger_nashville.png"
             },
             {
                 id: "k4", name: "Korean BBQ", price: 32,
                 description: "kurczak, sos gochujang, kimchi, sałata, majonez sezamowy",
                 descriptionEn: "chicken, gochujang sauce, kimchi, lettuce, sesame mayo",
-                image: "/panel_kura.png"
+                image: "/burger_chicken_loaded.png"
             },
         ]
     },
@@ -138,12 +143,13 @@ export const MENU: MenuCategory[] = [
                 id: "v1", name: "Plant Studio", price: 29,
                 description: "patty roślinny, sałata, pomidor, ogórek, cebula, sos wegański",
                 descriptionEn: "plant-based patty, lettuce, tomato, cucumber, onion, vegan sauce",
-                image: "/panel_neon.png"
+                image: "/burger_veggie.png"
             },
             {
                 id: "v2", name: "Portobello", price: 27,
                 description: "grzyb portobello, ser kozi, rucola, pomidor, sos ziołowy",
-                descriptionEn: "portobello mushroom, goat cheese, arugula, tomato, herb sauce"
+                descriptionEn: "portobello mushroom, goat cheese, arugula, tomato, herb sauce",
+                image: "/burger_veggie.png"
             },
         ]
     },

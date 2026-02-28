@@ -1,0 +1,142 @@
+/* Feedback page — rh-studio style */
+.feedback-stats {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2rem 2.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-family: 'Bebas Neue', 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: #F5ECEA;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+}
+
+.stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 4px;
+    color: rgba(138, 116, 120, 0.6);
+    text-transform: uppercase;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* Stars */
+.stars {
+    display: flex;
+    gap: 0.15rem;
+}
+
+.star {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.12);
+    transition: color 0.15s, transform 0.15s, text-shadow 0.15s;
+    line-height: 1;
+    padding: 0;
+}
+
+.star.filled {
+    color: #FF6B00;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.6);
+}
+
+.star:hover {
+    transform: scale(1.25);
+}
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .feedback-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.feedback-card {
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.feedback-card:hover {
+    border-color: rgba(220, 20, 60, 0.38);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(220, 20, 60, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.feedback-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.feedback-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #DC143C, #FF6B00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(220, 20, 60, 0.35);
+}
+
+.feedback-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #F5ECEA;
+    text-transform: uppercase;
+}
+
+.feedback-date {
+    color: rgba(138, 116, 120, 0.6);
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.feedback-message {
+    color: rgba(245, 236, 234, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+}
+
+.feedback-form-container {
+    position: sticky;
+    top: 84px;
+}

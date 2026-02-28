@@ -1,0 +1,205 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background: rgba(8, 9, 10, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(220, 20, 60, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 107, 0, 0.08);
+}
+
+.navbar-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-brand {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 5px;
+  background: linear-gradient(135deg, #DC143C 0%, #FF6B00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px rgba(220, 20, 60, 0.3));
+  transition: filter 0.2s;
+}
+
+.navbar-brand:hover {
+  filter: drop-shadow(0 0 18px rgba(220, 20, 60, 0.6));
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  margin-left: auto;
+}
+
+.nb-link {
+  color: rgba(245, 236, 234, 0.55);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  transition: color 0.2s, text-shadow 0.2s;
+  position: relative;
+}
+
+.nb-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #DC143C, #FF6B00);
+  transition: right 0.3s ease;
+}
+
+.nb-link:hover {
+  color: #F5ECEA;
+}
+
+.nb-link:hover::after {
+  right: 0;
+}
+
+.nb-user {
+  color: rgba(245, 236, 234, 0.75) !important;
+}
+
+.nb-cart {
+  position: relative;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.2s, filter 0.2s;
+  display: inline-block;
+}
+
+.nb-cart:hover {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 8px rgba(220, 20, 60, 0.6));
+}
+
+.nb-badge {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  background: linear-gradient(135deg, #DC143C, #FF6B00);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.52rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  box-shadow: 0 0 10px rgba(220, 20, 60, 0.8);
+}
+
+.nb-login {
+  font-family: 'Teko', 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  padding: 0.45rem 1.3rem;
+  background: transparent;
+  border: 1px solid rgba(220, 20, 60, 0.5);
+  color: #DC143C;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.nb-login:hover {
+  background: linear-gradient(135deg, #DC143C, #8B0000);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(220, 20, 60, 0.45);
+  border-color: transparent;
+}
+
+.nb-logout {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 0.45rem 1.2rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(245, 236, 234, 0.45);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-transform: uppercase;
+}
+
+.nb-logout:hover {
+  border-color: rgba(220, 20, 60, 0.5);
+  color: #DC143C;
+}
+
+/* Mobile toggler */
+.navbar-toggler {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 4px;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #DC143C;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+@media (max-width: 900px) {
+  .navbar-toggler {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(8, 9, 10, 0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(220, 20, 60, 0.25);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .nb-link::after {
+    display: none;
+  }
+}
